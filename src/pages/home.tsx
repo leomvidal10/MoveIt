@@ -2,7 +2,7 @@ import Head from "next/head";
 import { GetServerSideProps } from 'next'
 import React from "react";
 import { ChallengeBox } from "../components/challengeBox";
-import { CompletedChallenges } from "../components/completedChallenges";
+import { CompletedChallenges } from "../components/completedChallenge";
 import { Countdown } from "../components/Countdown";
 import { Profile } from "../components/Profile";
 import { XpBar } from "../components/XpBar";
@@ -37,7 +37,7 @@ export default function home(props: HomeProps) {
                     <CountDownProvider>
                         <section>
                             <div>
-                                <Profile userName={props.user} imageProfileUrl={props.imageProfile}/>
+                                <Profile userName={props.user} imageProfileUrl={props.imageProfile} />
                                 <CompletedChallenges />
                                 <Countdown />
                             </div>
@@ -55,7 +55,7 @@ export default function home(props: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const { level, currentXp, challengesCompleted } = ctx.req.cookies;
 
-    const octokit = new Octokit({auth: `314330d562ace391cae23b5bc05db7f4d2b14f55`});    
+    const octokit = new Octokit({ auth: `597301712caed697b8a3bb1699a950de2f017fd7` });
 
     const response = await octokit.request("GET /user", {
     });
