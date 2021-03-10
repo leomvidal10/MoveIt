@@ -55,7 +55,7 @@ export default function home(props: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const { level, currentXp, challengesCompleted } = ctx.req.cookies;
 
-    const octokit = new Octokit({ auth: `597301712caed697b8a3bb1699a950de2f017fd7` });
+    const octokit = new Octokit({ auth: `0c45b3c3b33e382805db6c9e489863d4645c5e1a` });
 
     const response = await octokit.request("GET /user", {
     });

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/pages/Index.module.css'
 
 export default function Home() {
@@ -15,9 +16,9 @@ export default function Home() {
           <div className={styles.areaLogin}>
             <img src="/icons/Logo.svg" alt="logo" />
             <h1>Bem-Vindo!</h1>
-            <a href="https://github.com/login/oauth/authorize?client_id=614cecf796aa8cca7619">
-              <img src="/icons/Git.svg" alt="git logo" />
-            </a>
+            <Link href="https://github.com/login/oauth/authorize?client_id=614cecf796aa8cca7619">
+              <img className={styles.button} src="/icons/Git.svg" alt="git logo" />
+            </Link>
           </div>
         </section>
       </div>

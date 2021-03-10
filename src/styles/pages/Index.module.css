@@ -31,15 +31,16 @@
     margin: 2rem 0;
 }
 
-.areaLogin a img {
+.button {
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     width: 20rem;
     padding: 0.8rem;
     background-color: var(--title);
     transition: filter 0.2s;
+    cursor: pointer;
 }
 
-.areaLogin a img:hover {
+.button:hover {
     filter: brightness(0.85);
 }
