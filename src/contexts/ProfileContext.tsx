@@ -45,7 +45,7 @@ export function ProfileProvider({ children, ...rest }: ProfileProviderProps) {
         firebase.auth().signInWithPopup(provider).then((result) => {
             Cookies.set('nameUser', result.user.displayName)
             Cookies.set('imageProfile', result.user.photoURL)
-            router.push("http://localhost:3000/home")
+            router.push("https://move-it-tau-six.vercel.app/home")
         }).catch((error) => {
             console.log(error);
         });
