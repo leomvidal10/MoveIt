@@ -109,7 +109,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
                 startNewChallenge,
                 resetChallenge,
                 completeChallenges,
-                closeLevelUpModal
+                closeLevelUpModal,
             }}>
             {children}
             { isLevelUpModalOpen && <LevelUpModal />}
